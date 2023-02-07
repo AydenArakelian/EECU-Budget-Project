@@ -17,42 +17,123 @@
         <div class="deductions-container">
             <h1>Pay Period Deductions</h1>
 
-            <table>
+            <table class="pay-period-deductions">
                 <tr>
                     <th>Gross Annual Income</th>
-                    <th><input type="text" id="deducAmount" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount1" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>Gross Monthly Income</th>
-                    <th><input type="text" id="deducAmount" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount2" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>Federal Taxes</th>
-                    <th><input type="text" id="deducAmount" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount3" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>State Taxes</th>
-                    <th><input type="text" id="deducAmount" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount4" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>Social Security</th>
-                    <th><input type="text" id="deducAmount" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount5" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>Medicare</th>
-                    <th><input type="text" id="deducAmount" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount6" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>State Disability</th>
-                    <th><input type="text" id="deducAmount" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount7" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>Retirement Investment</th>
-                    <th><input type="text" id="deducAmount" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount8" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>Medical Insurance</th>
                     <th>$180</th>
+                </tr>
+                <tr>
+                    <th id="totalCatText">Total</th>
+                    <th><p id="grossIncomeTotal"></p></th>
+                </tr>
+            </table>
+
+            <h1 id="check-h1">Check Register</h1>
+            
+            <table class="check-register">
+                <tr>
+                    <th>Number Or Code</th>
+                    <th>Date</th>
+                    <th>Transaction Description</th>
+                    <th>Payment</th>
+                    <th>Deposit Credit</th>
+                    <th>Balance</th>
+                </tr>
+                <tr>
+                    <th><input type="text" placeholder="Num/Code"></th>
+                    <th><input type="text" placeholder="Insert Date"></th>
+                    <th><input type="text" placeholder="Type Desc"></th>
+                    <th><input type="text" id="paymentAmount1" placeholder="Insert Amount"></th>
+                    <th><input type="text" id="depositAmount1" placeholder="Insert Amount"></th>
+                    <th><input type="text" placeholder="Balance"></th>
+                </tr>
+                <tr>
+                    <th><input type="text" placeholder="Num/Code"></th>
+                    <th><input type="text" placeholder="Insert Date"></th>
+                    <th><input type="text" placeholder="Type Desc"></th>
+                    <th><input type="text" id="paymentAmount2" placeholder="Insert Amount"></th>
+                    <th><input type="text" id="depositAmount2" placeholder="Insert Amount"></th>
+                    <th><input type="text" placeholder="Balance"></th>
+                </tr>
+                <tr>
+                    <th><input type="text" placeholder="Num/Code"></th>
+                    <th><input type="text" placeholder="Insert Date"></th>
+                    <th><input type="text" placeholder="Type Desc"></th>
+                    <th><input type="text" id="paymentAmount3" placeholder="Insert Amount"></th>
+                    <th><input type="text" id="depositAmount3" placeholder="Insert Amount"></th>
+                    <th><input type="text" placeholder="Balance"></th>
+                </tr>
+                <tr>
+                    <th><input type="text" placeholder="Num/Code"></th>
+                    <th><input type="text" placeholder="Insert Date"></th>
+                    <th><input type="text" placeholder="Type Desc"></th>
+                    <th><input type="text" id="paymentAmount4" placeholder="Insert Amount"></th>
+                    <th><input type="text" id="depositAmount4" placeholder="Insert Amount"></th>
+                    <th><input type="text" placeholder="Balance"></th>
+                </tr>
+                <tr>
+                    <th><input type="text" placeholder="Num/Code"></th>
+                    <th><input type="text" placeholder="Insert Date"></th>
+                    <th><input type="text" placeholder="Type Desc"></th>
+                    <th><input type="text" id="paymentAmount5" placeholder="Insert Amount"></th>
+                    <th><input type="text" id="depositAmount5" placeholder="Insert Amount"></th>
+                    <th><input type="text" placeholder="Balance"></th>
+                </tr>
+                <tr>
+                    <th><input type="text" placeholder="Num/Code"></th>
+                    <th><input type="text" placeholder="Insert Date"></th>
+                    <th><input type="text" placeholder="Type Desc"></th>
+                    <th><input type="text" id="paymentAmount6" placeholder="Insert Amount"></th>
+                    <th><input type="text" id="depositAmount6" placeholder="Insert Amount"></th>
+                    <th><input type="text" placeholder="Balance"></th>
+                </tr>
+                <tr>
+                    <th><input type="text" placeholder="Num/Code"></th>
+                    <th><input type="text" placeholder="Insert Date"></th>
+                    <th><input type="text" placeholder="Type Desc"></th>
+                    <th><input type="text" id="paymentAmount7" placeholder="Insert Amount"></th>
+                    <th><input type="text" id="depositAmount7" placeholder="Insert Amount"></th>
+                    <th><input type="text" placeholder="Balance"></th>
+                </tr>
+                <tr>
+                    <th><input type="text" placeholder="Num/Code"></th>
+                    <th><input type="text" placeholder="Insert Date"></th>
+                    <th><input type="text" placeholder="Type Desc"></th>
+                    <th><input type="text" id="paymentAmount8" placeholder="Insert Amount"></th>
+                    <th><input type="text" id="depositAmount8" placeholder="Insert Amount"></th>
+                    <th><input type="text" placeholder="Balance"></th>
                 </tr>
             </table>
         </div>
