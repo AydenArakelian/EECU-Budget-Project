@@ -48,7 +48,17 @@ input {
     padding: 3% 5% 0 5%;
 }
 
-.deductions-container h1 {
+.check-register-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 3% 5% 3% 5%;
+}
+
+.deductions-container h1,
+.check-register-container h1 {
     padding-bottom: 20px;
 }
 

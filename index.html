@@ -20,48 +20,50 @@
             <table class="pay-period-deductions">
                 <tr>
                     <th>Gross Annual Income</th>
-                    <th><input type="number" id="deductAmount1" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="grossAnnualIncome" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>Gross Monthly Income</th>
-                    <th><input type="number" id="deductAmount2" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="grossMonthlyIncome" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>Federal Taxes</th>
-                    <th><input type="number" id="deductAmount3" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount1" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>State Taxes</th>
-                    <th><input type="number" id="deductAmount4" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount2" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>Social Security</th>
-                    <th><input type="number" id="deductAmount5" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount3" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>Medicare</th>
-                    <th><input type="number" id="deductAmount6" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount4" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>State Disability</th>
-                    <th><input type="number" id="deductAmount7" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount5" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>Retirement Investment</th>
-                    <th><input type="number" id="deductAmount8" placeholder="Insert Amount"></th>
+                    <th><input type="number" id="deductAmount6" placeholder="Insert Amount"></th>
                 </tr>
                 <tr>
                     <th>Medical Insurance</th>
-                    <th>$180</th>
+                    <th id = "deductAmount7">$180</th>
                 </tr>
                 <tr>
                     <th id="totalCatText">Total</th>
                     <th><p id="grossIncomeTotal"></p></th>
                 </tr>
             </table>
+        </div>
 
+        <div class = "check-register-container">
             <h1 id="check-h1">Check Register</h1>
-            
+
             <table class="check-register">
                 <tr>
                     <th>Number Or Code</th>
@@ -135,11 +137,16 @@
                     <th><input type="text" id="depositAmount8" placeholder="Insert Amount"></th>
                     <th><input type="text" placeholder="Balance"></th>
                 </tr>
+                <tr>
+                    <th><p>Net Monthly Income</p></th>
+                    <th><p><span id = "net-output"></span></p></th>
+                    <th><p>Total Deductions</p></th>
+                    <th><p><span id = "total-deduc-output"></span></p></th>
+                    <th><p></p></th>
+                    <th><p></p></th>
+                </tr>
             </table>
         </div>
-
-        <p>Total Deductions</p>
-        <p>Net Monthly Income</p>
     </main>
 
     <footer>
