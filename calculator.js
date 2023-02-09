@@ -1,5 +1,6 @@
 setInterval(
     function AddInputs() {
+        //#region Pay Period Deductions
         let deductAmount1 = document.getElementById("deductAmount1");
         let deductAmount2 = document.getElementById("deductAmount2");
         let deductAmount3 = document.getElementById("deductAmount3");
@@ -35,22 +36,55 @@ setInterval(
             totalNetText.textContent = "$" + netMonthlyIncomeValue;
         else if (grossAnnualIncome.length == 0)
             totalNetText.textContent = 0;
+
+            //#endregion
+
+        //#region Check Register
+        let paymentAmount1 = document.getElementById("paymentAmount1").value;
+        let depositAmount1 = document.getElementById("depositAmount1").value;
+        let paymentAmount2 = document.getElementById("paymentAmount2").value;
+        let depositAmount2 = document.getElementById("depositAmount2").value;
+        let paymentAmount3 = document.getElementById("paymentAmount3").value;
+        let depositAmount3 = document.getElementById("depositAmount3").value;
+        let paymentAmount4 = document.getElementById("paymentAmount4").value;
+        let depositAmount4 = document.getElementById("depositAmount4").value;
+        let paymentAmount5 = document.getElementById("paymentAmount5").value;
+        let depositAmount5 = document.getElementById("depositAmount5").value;
+        let paymentAmount6 = document.getElementById("paymentAmount6").value;
+        let depositAmount6 = document.getElementById("depositAmount6").value;
+        let paymentAmount7 = document.getElementById("paymentAmount7").value;
+        let depositAmount7 = document.getElementById("depositAmount7").value;
+        let paymentAmount8 = document.getElementById("paymentAmount8").value;
+        let depositAmount8 = document.getElementById("depositAmount8").value;
+        let totalPaymentsText = document.getElementById("total-deduc-output");
+        let totalDepositsText = document.getElementById("total-deposit-output");
+
+        let paymentAmountValue1 = paymentAmount1;
+        let depositAmountValue1 = depositAmount1;
+        let paymentAmountValue2 = paymentAmount2;
+        let depositAmountValue2 = depositAmount2;
+        let paymentAmountValue3 = paymentAmount3;
+        let depositAmountValue3 = depositAmount3;
+        let paymentAmountValue4 = paymentAmount4;
+        let depositAmountValue4 = depositAmount4;
+        let paymentAmountValue5 = paymentAmount5;
+        let depositAmountValue5 = depositAmount5;
+        let paymentAmountValue6 = paymentAmount6;
+        let depositAmountValue6 = depositAmount6;
+        let paymentAmountValue7 = paymentAmount7;
+        let depositAmountValue7 = depositAmount7;
+        let paymentAmountValue8 = paymentAmount8;
+        let depositAmountValue8 = depositAmount8;
+
+        let totalPayments = (+paymentAmountValue1 + +paymentAmountValue2 + +paymentAmountValue3 + +paymentAmountValue4 + +paymentAmountValue5 + +paymentAmountValue6 + +paymentAmountValue7 + +paymentAmountValue8).toFixed(2);
+        let totalDeposits = (+depositAmountValue1 + +depositAmountValue2 + +depositAmountValue3 + +depositAmountValue4 + +depositAmountValue5 + +depositAmountValue6 + +depositAmountValue7 + +depositAmountValue8).toFixed(2);
+        let finalBalanceText = document.getElementById("final-balance");
+        let finalBalanceValue = (totalDeposits - totalPayments).toFixed(2);
+
+        totalPaymentsText.textContent = "-" + totalPayments;
+        totalDepositsText.textContent = "+" + totalDeposits;
+
+        finalBalanceText.textContent = "$" + finalBalanceValue;
+        //#endregion
     }
 , 100)
-
-// setInterval(
-//     function AddInputs() {
-//         let input1 = document.getElementById("deductAmount1").value;
-//         let input2 = document.getElementById("deductAmount2").value;
-//         let input3 = document.getElementById("deductAmount3").value;
-//         let input4 = document.getElementById("deductAmount4").value;
-//         let input5 = document.getElementById("deductAmount5").value;
-//         let input6 = document.getElementById("deductAmount6").value;
-
-//         let grossMonthlyIncome = document.getElementById("grossMonthlyIncome").value;
-//         let netMonthlyIncome = document.getElementById("netMonthlyIncome").textContent;
-//         let totalDeductions = +input1 + +input2 + +input3 + +input4 + +input5 + +input6 + +180;
-
-//         netMonthlyIncome = grossMonthlyIncome - totalDeductions;
-//     }
-// )
