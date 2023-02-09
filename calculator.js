@@ -7,23 +7,34 @@ setInterval(
         let deductAmount5 = document.getElementById("deductAmount5");
         let deductAmount6 = document.getElementById("deductAmount6");
 
-        let grossAnnualIncome = document.getElementById("grossAnnualIncome");
+        let grossAnnualIncome = document.getElementById("grossAnnualIncome").value;
         let grossMonthlyIncome = document.getElementById("grossMonthlyIncome");
-        let netMonthlyIncome = document.getElementById("netMonthlyIncome");
+        let grossMonthlyIncomeValue = (grossAnnualIncome / 12).toFixed(2);
+        let totalNetText = document.getElementById("netMonthlyIncomeText");
 
-        if (grossAnnualIncome != null)
-            grossMonthlyIncome = grossAnnualIncome / 12;
+        grossMonthlyIncome.textContent = "$" + grossMonthlyIncomeValue;
+            
+        let deductAmountValue1 = (grossMonthlyIncomeValue * 0.12).toFixed(2);
+        let deductAmountValue2 = (grossMonthlyIncomeValue * 0.07).toFixed(2);
+        let deductAmountValue3 = (grossMonthlyIncomeValue * 0.062).toFixed(2);
+        let deductAmountValue4 = (grossMonthlyIncomeValue * 0.0145).toFixed(2);
+        let deductAmountValue5 = (grossMonthlyIncomeValue * 0.01).toFixed(2);
+        let deductAmountValue6 = (grossMonthlyIncomeValue * 0.05).toFixed(2);
 
-        deductAmount1.textContent = grossMonthlyIncome * 0.12;
-        deductAmount2.textContent = grossMonthlyIncome * 0.07;
-        deductAmount3.textContent = grossMonthlyIncome * 0.062;
-        deductAmount4.textContent = grossMonthlyIncome * 0.0145;
-        deductAmount5.textContent = grossMonthlyIncome * 0.01;
-        deductAmount6.textContent = grossMonthlyIncome * 0.05;
+        deductAmount1.textContent = "$" + deductAmountValue1;
+        deductAmount2.textContent = "$" + deductAmountValue2;
+        deductAmount3.textContent = "$" + deductAmountValue3;
+        deductAmount4.textContent = "$" + deductAmountValue4;
+        deductAmount5.textContent = "$" + deductAmountValue5;
+        deductAmount6.textContent = "$" + deductAmountValue6;
 
-        let totalDeductions = +deductAmount1 + +deductAmount2 + +deductAmount3 + +deductAmount4 + +deductAmount5 + +deductAmount6 + +180;
-
-        netMonthlyIncome = grossMonthlyIncome - totalDeductions;
+        let totalDeductions = (+deductAmountValue1 + +deductAmountValue2 + +deductAmountValue3 + +deductAmountValue4 + +deductAmountValue5 + +deductAmountValue6 + +180).toFixed(2);
+        let netMonthlyIncomeValue = (grossMonthlyIncomeValue - totalDeductions).toFixed(2);
+        
+        if (grossAnnualIncome.length != 0)
+            totalNetText.textContent = "$" + netMonthlyIncomeValue;
+        else if (grossAnnualIncome.length == 0)
+            totalNetText.textContent = 0;
     }
 , 100)
 
